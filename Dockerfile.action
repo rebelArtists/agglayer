@@ -1,0 +1,24 @@
+FROM ubuntu:latest
+
+RUN apt-get update && \
+    apt-get install -y \
+    build-essential \
+    curl \
+    make \
+    jq \
+    git \
+    yq \
+    python3-pip \
+    sudo
+    
+# Update new packages
+RUN apt-get update
+    
+# Copies your code file from your action repository to the filesystem path `/` of the container
+COPY cdk-build-script.sh /cdk-build-script.sh
+
+# kurtosis engine port
+EXPOSE 9710
+
+# Executes `entrypoint.sh` when the Docker container starts up
+ENTRYPOINT ["/cdk-build-script.sh"]

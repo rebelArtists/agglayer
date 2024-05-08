@@ -1,0 +1,23 @@
+name: Custom CDK Devnets
+
+on:
+  push:
+
+jobs:
+  regression_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run Regression Tests
+        uses: 0xPolygon/kurtosis-cdk@v0.1.6
+        with:
+          zkevm_agglayer: '0.1.4'
+          zkevm_bridge_service: 'v0.4.2'
+          zkevm_bridge_ui: '0006445'
+          zkevm_dac: '0.0.7'
+          zkevm_node: '0.6.5-cdk'
+          kurtosis_cli: '0.89.3'
+          kurtosis_cdk: 'v0.2.0'
+          bake_time: 30
