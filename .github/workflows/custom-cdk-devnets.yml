@@ -19,5 +19,5 @@ jobs:
           zkevm_dac: '0.0.7'
           zkevm_node: '0.6.5-cdk'
           kurtosis_cli: '0.89.3'
-          kurtosis_cdk: 'v0.2.0'
+          kurtosis_cdk: 'v0.2.3'
           bake_time: 30
