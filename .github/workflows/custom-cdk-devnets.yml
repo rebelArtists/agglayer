@@ -12,6 +12,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Regression Tests
-        uses: 0xPolygon/kurtosis-cdk@v0.1.10
+        uses: 0xPolygon/kurtosis-cdk@v0.1.9
         with:
           zkevm_bridge_service: '2e28fe4'
