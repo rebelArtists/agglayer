@@ -3,7 +3,7 @@ name: Custom CDK Devnets
 on:
   push:
 
-# please 
+# please god
 jobs:
   regression_tests:
     runs-on: ubuntu-latest
